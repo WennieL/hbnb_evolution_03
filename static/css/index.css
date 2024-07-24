@@ -148,14 +148,15 @@ header .status > .bubble.down {
 #menu {
   width: 100%;
   padding-top: 45px;
-  padding-bottom: 45px;
+  /* padding-bottom: 45px; */
   /* border: red 2px solid; */
 }
 #menu .contents {
   border: var(--color-medium-green) 2px solid;
-  border-radius: 55px;
-  margin: 0 auto;
-  max-width: 1260px;
+  border-radius: 35px;
+  margin: 40px;
+  /* padding: 10px; */
+  /* max-width: 1260px; */
   display: flex;
   justify-content: space-around;
   font-size: 1.6rem;
@@ -349,18 +350,17 @@ header .status > .bubble.down {
   /* border: red 2px solid; */
   color: var(--color-leaf-green);
   font-weight: var(--font-weight-bold);
-
 }
 #results {
   width: 100%;
   min-height: 100%;
-  font-size: 1.8rem;
+  font-size: var(--font-size-x-large);
 }
 #results ul, #results li {
   margin: 0;
   padding: 0;
   list-style: none;
-}
+  }
 #results > .none {
   width: 100%;
   /* padding: 25px 0; */
@@ -369,33 +369,38 @@ header .status > .bubble.down {
   margin-top: 35px;
 }
 #results span {
-  height: 55px;
-  width: 120px;
   border-radius: 50px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-leaf-green);
+  /* background-color: var(--color-leaf-green); */
   border: none;
-  color: var(--color-wild-sand);
+  color: var(--color-deep-green);
   font: var(--font-family-base);
-  font-size: var(--font-size-x-large);
+  font-size: var(--font-size-medium);
 }
 #results > .listings > .country_group {
-  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(0, 0, 0, 0.1); */
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
 }
 #results > .listings > .country_group > .country_name {
   font-size: 3.2rem;
-  margin: 10px 0;
+  margin: 5px 0;
   padding: 5px 0;
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-medium-green);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-style: double;
+  text-underline-offset: 5px;
+  line-height: 30px;
 }
 #results > .listings > .country_group > .country_name .flag {
   font-family: "Flags";
 }
 #results > .listings > .country_group > .cities > .city_group {
-  background-color: rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
 #results > .listings > .country_group > .cities > .city_group > .city_name {
@@ -404,37 +409,88 @@ header .status > .bubble.down {
   padding: 8px 0;
 }
 #results > .listings .place {
-  background-color: rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--color-medium-green);
+  border-radius: 35px;
   padding: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-#results > .listings .place > .name {
+#results > .listings .place > .place-img img {
+  width: 100px; 
+  height: 150px;
+}
+#results > .listings .place > .place-section {
+  width: 75%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#results > .listings .place > .place-section .name-accommodations {
   font-size: 2rem;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid var(--color-dark-grey);
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 10px;
-  padding: 10px 0;
 }
-#results > .listings .place > .details {
+#results > .listings .place > .place-section .name {
+  font-size: var(--font-size-x-large);
+}
+#results > .listings .place > .place-section .accommodations {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+#results > .listings .place > .place-section .accommodations i {
+  /* border: red 2px solid; */
+  padding: 5px;
+  margin-left: 10px;
+}
+#results > .listings .place > .place-section .amenities-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#results > .listings .place > .place-section .amenities-price .amenities {
+  flex: 1;
+}
+#results > .listings .place > .place-section .amenities-price .price {
+  flex: 1;
+  text-align: right;
+}
+#results > .listings .place > .place-section .details {
   font-size: 1.4rem;
   position: relative;
   display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-deep-green);
+  padding-top: 10px;
+}
+#results > .listings .place > .place-section .address {
+  margin-bottom: 10px;
 }
 #results > .listings .place > .details > div {
-  height: 52px;
+  /* height: 52px; */
   margin-right: 10px;
-  padding: 0 5px;
+  padding: 0 2.5px;
 }
-#results > .listings .place > .details > div:nth-child(2n) {
-  background-color: rgba(255, 255, 255, 0.2);
+/* #results > .listings .place > .place-border-line {
+  border-left: #262624 2px solid;
 }
 #results > .listings .place > .details > .price {
   width: 120px;
-}
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+} */
 #results > .listings .place > .details > .price > .digits {
   font-size: 4rem;
 }
-#results > .listings .place > .details > .price > .pax {
-  font-size: 1.2rem;
+#results > .listings .place > .details > .price > span .pax {
+  font-size: var(--font-size-small);
+    /* flex-direction: unset; */
+    display: flex;
 }
 #results > .listings .place > .details > .description {
   width: 280px;
@@ -449,32 +505,21 @@ header .status > .bubble.down {
   display: flex;
   align-items: center;
 }
-#results > .listings .place > .details > .amenities {
+#results > .listings .place > .details > .text {
+  /* border: 2px solid red; */
+  display: contents;
   flex: 1;
   display: flex;
   align-items: center;
+  margin-left: 2px;
 }
-#results > .listings .place > .details > .amenities > span {
+/* #results > .listings .place > .details > .amenities > span {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 16px;
   padding: 8px 8px 5px 8px;
   margin-right: 5px;
   line-height: 1.4rem;
-}
-#results > .listings .place > .details > .accommodations {
-  font-size: 2rem;
-  position: absolute;
-  top: -45px;
-  right: 0;
-  margin-right: 0;
-}
-#results > .listings .place > .details > .accommodations > span {
-  margin-left: 10px;
-}
-#results > .listings .place > .details > .accommodations > span > i {
-  margin-right: 5px;
-}
-
+} */
 footer {
   width: 100%;
   height: 80px;

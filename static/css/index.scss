@@ -1,9 +1,40 @@
+:root {
+    /* color */
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #cccccc;
+    --color-dark-grey: #353535;
+    --color-deep-green: #262624;
+    --color-dark-forest: #3a4032;
+    --color-tree-top: #515a47;
+    --color-medium-green: #687353;
+    --color-olive: #686e64;
+    --color-light-green: #99a678;
+    --color-leaf-green: #63c063;
+    --color-soil: #c5987f;
+    --color-sand: #ebe8dd;
+    --color-wild-sand: #f6f6f6;
+    --color-earth: #cbb19d;
+    --text-color: var(--color-black);
+    /* font */
+    --font-family-base: "Centra No2",Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-family-title: "Raleway",Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+  }
+  
 html, body {
     margin: 0;
     padding: 0 0 30px 0;
     font-family: "Josefin Sans", sans-serif;
     font-size: 10px;
-    background-color: #FFF;
+    background-color: var(--color-wild-sand);
 }
 
 button {
@@ -38,17 +69,36 @@ header {
     display: flex;
     box-sizing: border-box;
 
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        img {
+            width: 50%;
+        }
+    }
+
     .content {
         flex: 1;
+        color: var(--color-wild-sand);
+        padding: 30px;
 
         .title {
             font-size: 36px;
             font-weight: 700;
-            font-style: italic;
+            font-style: var(--font-family-base);
+            padding-top: 15px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
         }
         .subtitle {
-            font-size: 24px;
-            padding-left: 5px;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+            padding-bottom: 20px;
         }
     }
 
