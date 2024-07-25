@@ -86,9 +86,8 @@
                     <span class="specific">
                         <label>
                             <input type="radio" name="amenities-radio-group" value="specific" {{ specific_amen_checked }} />
-                            <span>Specific Ones</span>
+                            <span>Specific Amenities</span>
                             <button id="btn-specific-amenities-select" type="button">
-                                <span>Please select</span>
                                 <span class="arrows">&raquo;</span>
                             </button>
                         </label>
@@ -132,7 +131,15 @@
             {% include "results.html" %}
         {% else %}
             <div class="none">
-                <h1>Please run the <span>Search</span> above to find available properties!</h1>
+                <h1>Please run the 
+                    <span style="background-color: #63c063; 
+                    color: #f6f6f6; 
+                    font-size: 18px; 
+                    height: 60px;
+                    width: 100px;
+                    border-radius: 50px;">Search
+                    </span> above to find available properties!
+                </h1>
             </div>
         {% endif %}
     </section>

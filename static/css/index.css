@@ -436,10 +436,12 @@ header .status > .bubble.down {
 }
 #results > .listings .place > .place-section .name {
   font-size: var(--font-size-x-large);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #results > .listings .place > .place-section .accommodations {
-  margin-bottom: 10px;
-  padding: 10px;
+  padding: 8px;
 }
 #results > .listings .place > .place-section .accommodations i {
   /* border: red 2px solid; */
@@ -454,9 +456,14 @@ header .status > .bubble.down {
 #results > .listings .place > .place-section .amenities-price .amenities {
   flex: 1;
 }
+#results > .listings .place > .place-section .amenities-price .amenities i {
+  margin-right: 2px;
+}
 #results > .listings .place > .place-section .amenities-price .price {
-  flex: 1;
   text-align: right;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 #results > .listings .place > .place-section .details {
   font-size: 1.4rem;
@@ -473,19 +480,6 @@ header .status > .bubble.down {
   /* height: 52px; */
   margin-right: 10px;
   padding: 0 2.5px;
-}
-/* #results > .listings .place > .place-border-line {
-  border-left: #262624 2px solid;
-}
-#results > .listings .place > .details > .price {
-  width: 120px;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-} */
-#results > .listings .place > .details > .price > .digits {
-  font-size: 4rem;
 }
 #results > .listings .place > .details > .price > span .pax {
   font-size: var(--font-size-small);
@@ -716,3 +710,4 @@ footer {
 }
 
 /*# sourceMappingURL=index.css.map */
+

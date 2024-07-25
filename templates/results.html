@@ -13,21 +13,33 @@
                             <img src="/static/img/house-shore-sea.jpg" alt="hotel photo">
                         </div>
                         <div class="place-section">
-                            <div class="name-accommodations">
-                                <span>
+                            <div class="name-accommodations">    
                                     <div class="name">{{ place.name }}</div>
                                     <div class="accommodations">
                                         <span class="rooms"><i class="fa-solid fa-house"></i>{{ place.number_of_rooms }}</span>
                                         <span class="bathrooms"><i class="fa-solid fa-bath"></i>{{ place.number_of_bathrooms }}</span>
                                         <span class="guests"><i class="fa-solid fa-person"></i>{{ place.max_guests }}</span>
                                     </div>
-                                </div>
-                            </span>                         
+                            </div>                      
                             <div class="amenities-price">
                                 <div class="amenities">
                                     {% if place.amenities %}
                                         {% for amenity in place.amenities %}
-                                        <span>{{ amenity }}</span>
+                                            {% if amenity == 'TeleV' %}
+                                                <span><i class="fa fa-television" aria-hidden="true"></i> {{ amenity }}</span>
+                                            {% elif amenity == 'Toilet' %}
+                                                <span><i class="fa fa-toilet" aria-hidden="true"></i> {{ amenity }}</span>
+                                            {% elif amenity == 'bayhtub' %}
+                                                <span><i class="fa fa-bath" aria-hidden="true"></i> {{ amenity }}</span>
+                                            {% elif amenity == 'Wi-fi' %}
+                                                <span><i class="fa fa-wifi" aria-hidden="true"></i> {{ amenity }}</span>
+                                            {% elif amenity == 'Mini-fridge' %}
+                                                <span><i class="fa fa-snowflake" aria-hidden="true"></i> {{ amenity }}</span>
+                                            {% elif amenity == 'Air-con' %}
+                                                <span><i class="fa fa-snowflake" aria-hidden="true"></i> {{ amenity }}</span>
+                                            {% else %}
+                                                <span>{{ amenity }}</span>
+                                            {% endif %}
                                         {% endfor %}
                                     {% else %}
                                         No amenities!
@@ -35,18 +47,18 @@
                                 </div>
                                 <div class="price">
                                     <span>
-                                        <div class="digits">${{ place.price_per_night }}</div>
-                                        <div class="pax">per night</div>
+                                        <div style="font-size: x-large; color: #63c063; font-weight: bold;" class="digits">${{ place.price_per_night }}</div>
+                                        <div style="margin-left: 3px;" class="pax">per night</div>
                                     </span>
                                 </div>
                             </div>
                             <div class="details">
                                 <details>
-                                    <summary>Review</summary>
-                                        <p><div class="description">{{ place.description }}</div></p>
+                                    <summary style="font-size: 18px;"><span style="font-size: 14px; margin-left: 2px;">Review</span></summary>
+                                        <p><div style="font-size: 14px;" class="description">{{ place.description }}</div></p>
                                 </details>
                                 <div class="address" latitude="{{ place.latitude }}" longitude="{{ place.longitude }}"></div>
-                                <div class="text"><i  class="fa fa-home" aria-hidden="true"></i>{{ place.address }}</div>
+                                <div style="font-size: 14px" class="text"><i style="margin-right: 3.5px;" class="fa fa-home" aria-hidden="true"></i>{{ place.address }}</div>
                             </div>
                         </div>
                     </li>
